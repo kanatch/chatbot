@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>チャットアプリ</title>
+	<!-- css -->
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<!-- メッセージ送信スクリプト -->
+	<script src="assets/js/messagePost.js"></script>
+	<!-- メッセージ受信スクリプト -->
+	<script src="assets/js/messageGet.js"></script>
+	
+	<!--fontawesome-->
+	<script src="https://kit.fontawesome.com/f229cc3689.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<section class="left">
+		<div class="profile">
+			<img src="/assets/img/icon.jpg">
+			<h1>ビルソン Bot</h1>
+			<p>好きなキーワードと好きな変身を設定できるよ！</p>
+			<form action="/admin" method="get">
+				<input type="submit" value="設定はこちら">
+			</form>
+		</div>
+	</section>
+	<section class="right">
+		<div class="header">
+			<h1>ビルソン Bot</h1>
+		</div>
+		<div id="msgs"></div>
+		
+		<div class="message-box">
+			<div class="message-area">
+				<!-- 画像の投稿フォーム -->
+				<label>
+					<i class="fa-solid fa-paperclip button-icon"></i>
+					<input type="file" id="imageForm" accept="image/*" hidden>
+				</label>
+	
+				<!-- 本文の入力フォーム -->
+				<input type="text" id="messageForm" placeholder="Aa"></textarea>
+	
+				<!-- テキスト送信ボタン -->
+				<button id="submitButton" type="button"><i class="fa-solid fa-paper-plane button-icon"></i></button>
+			</div>
+		</div>
+	</section>
+	
+	<script>
+		$('#imageForm').on('change', function () {
+    		var file = $(this).prop('files')[0];
+    		if(!file) {
+	    		$('#messageForm').attr('placeholder', 'Aa');
+	    		$('#messageForm').prop('disabled', false);
+    			return;
+    		}
+    		$('#messageForm').attr('placeholder', file.name + 'を選択中');
+    		$('#messageForm').prop('disabled', true);
+		});
+	</script>
+</body>
+</html>

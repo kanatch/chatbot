@@ -1,0 +1,6 @@
+# 定数を定義します
+WEBHOOK_URL = "https://chatbot-production-c38a.up.railway.app/callback" # BOT の URL
+DESTINATION = "fGJUpVVtAxyUda7Rf5OI7xVWBEyC224Ro"
+LINE_CHANNEL_ID = 8207036352
+LINE_CHANNEL_SECRET = "ytkEEhMQiyxegDIMScXaqmR5FSqfGgOD"
+LINE_CHANNEL_TOKEN = "vtrH4pIU4NfnfS8P7lKyFp3YCLrlqNyPNvoBLq8AHMXg0Qw6tWfYKJaJ8uvqdcTuVymt1VQuaVYtjhrG5E/exK5FeSo/SVT+mL5iwd7XXJLDhl6lwmVxQy3cW3wbL/4Mj3hsyBOF/xXAal4x+Daakh8v87jKF/2O/s3CC2nJQ6G="
